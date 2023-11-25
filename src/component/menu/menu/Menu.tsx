@@ -32,7 +32,7 @@ export function Menu() {
   axios.defaults.withCredentials = true;
 
   // axios
-  //   .get("https://uitcanteen-backend.herokuapp.com/menu")
+  //   .get("https://uitbackend.onrender.com/menu")
   //   .then((response) => {
   //     dishItem = response.data.menu;
   //   });
@@ -43,7 +43,7 @@ export function Menu() {
   useEffect(() => {
     async function getDish() {
       const responseMenu = await axios.get(
-        "https://uitcanteen-backend.herokuapp.com/menu"
+        "https://uitbackend.onrender.com/menu"
       );
       const fullMenu = responseMenu.data.menu;
       const storedMenu = JSON.stringify(fullMenu);
@@ -53,20 +53,20 @@ export function Menu() {
       //   console.log(getfullMenu);
       // }
       const data_main = await axios.get(
-        "https://uitcanteen-backend.herokuapp.com/menu/main"
+        "https://uitbackend.onrender.com/menu/main"
       );
       setDishItemMain(data_main.data.menu);
       const data_side = await axios.get(
-        "https://uitcanteen-backend.herokuapp.com/menu/side"
+        "https://uitbackend.onrender.com/menu/side"
       );
       setDishItemSide(data_side.data.menu);
       return data_main.data.menu, data_side.data.menu;
     }
     getDish();
   }, [
-    "https://uitcanteen-backend.herokuapp.com/menu",
-    "https://uitcanteen-backend.herokuapp.com/menu/main",
-    "https://uitcanteen-backend.herokuapp.com/menu/side",
+    "https://uitbackend.onrender.com/menu",
+    "https://uitbackend.onrender.com/menu/main",
+    "https://uitbackend.onrender.com/menu/side",
   ]);
 
   return (

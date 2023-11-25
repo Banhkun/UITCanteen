@@ -58,7 +58,7 @@ export function UserForm() {
     // window.localStorage.setItem("userName",userInfo)
     axios
       .post(
-        "https://uitcanteen-backend.herokuapp.com/updateuser",
+        "https://uitbackend.onrender.com/updateuser",
         JSON.stringify(userInfo)
       )
       .then((response) => {

@@ -33,7 +33,7 @@ export default function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get("https://uitcanteen-backend.herokuapp.com/").then((response) => {
+    axios.get("https://uitbackend.onrender.com/").then((response) => {
       setLoggedIn(response.data.loggedIn);
       window.localStorage.setItem("isLoggedIn", response.data.loggedIn);
       window.localStorage.setItem(

@@ -37,19 +37,19 @@ export function ProposedMenu() {
   useEffect(() => {
     async function getDish() {
       const data_main = await axios.get(
-        "https://uitcanteen-backend.herokuapp.com/menu/main/proposed"
+        "https://uitbackend.onrender.com/menu/main/proposed"
       );
       setDishItemMain(data_main.data.menu);
       const data_side = await axios.get(
-        "https://uitcanteen-backend.herokuapp.com/menu/side/proposed"
+        "https://uitbackend.onrender.com/menu/side/proposed"
       );
       setDishItemSide(data_side.data.menu);
       return data_main.data.menu, data_side.data.menu;
     }
     getDish();
   }, [
-    "https://uitcanteen-backend.herokuapp.com/menu/main",
-    "https://uitcanteen-backend.herokuapp.com/menu/side",
+    "https://uitbackend.onrender.com/menu/main",
+    "https://uitbackend.onrender.com/menu/side",
   ]);
   return (
     <>

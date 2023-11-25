@@ -30,7 +30,7 @@ export function History() {
   useEffect(() => {
     async function getDish() {
       const responseOrderHistoryPaid = await axios.get(
-        "https://uitcanteen-backend.herokuapp.com/completed"
+        "https://uitbackend.onrender.com/completed"
       );
       setOrderHistoryPaidCompleted(responseOrderHistoryPaid.data.completedOrders);
       const completedPay = responseOrderHistoryPaid.data.completedOrders;
@@ -38,7 +38,7 @@ export function History() {
       window.localStorage.setItem("completedPay", storedCompletedPay);
       
       const responseOrderHistoryCancelPaid = await axios.get(
-        "https://uitcanteen-backend.herokuapp.com/cancelled"
+        "https://uitbackend.onrender.com/cancelled"
       );
       setOrderHistoryPaidCancel(
         responseOrderHistoryCancelPaid.data.cancelledOrders
@@ -50,8 +50,8 @@ export function History() {
     }
     getDish();
   }, [
-    "https://uitcanteen-backend.herokuapp.com/completed",
-    "https://uitcanteen-backend.herokuapp.com/cancelled",
+    "https://uitbackend.onrender.com/completed",
+    "https://uitbackend.onrender.com/cancelled",
   ]);
   return (
     <>

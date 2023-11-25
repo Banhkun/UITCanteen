@@ -30,7 +30,7 @@ export function Register() {
 
   const register = () => {
     if (confirmPassword === passwordReg) {
-      Axios.post("https://uitcanteen-backend.herokuapp.com/register", {
+      Axios.post("https://uitbackend.onrender.com/register", {
         username: usernameReg,
         password: passwordReg,
       }).then((response) => {

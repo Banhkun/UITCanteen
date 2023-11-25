@@ -23,14 +23,14 @@ export function DetailInformation() {
   useEffect(() => {
     async function getPayInfo() {
       const getPayId = await axios.get(
-        "https://uitcanteen-backend.herokuapp.com/recentorder"
+        "https://uitbackend.onrender.com/recentorder"
       );
       // window.location.reload()
       setPayId(getPayId.data.orderId);
       console.log("check payId", payId);
     }
     getPayInfo();
-  }, ["https://uitcanteen-backend.herokuapp.com/recentorder",getPayInfo]);
+  }, ["https://uitbackend.onrender.com/recentorder",getPayInfo]);
   // console.log()
   return (
     <div className="DetailContainer">

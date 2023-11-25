@@ -23,13 +23,13 @@ export function CartItem({ id, quantity }: CartItemProps) {
   // useEffect(() => {
   //   async function getDish() {
   //     const data = await axios.get(
-  //       "https://uitcanteen-backend.herokuapp.com/menu"
+  //       "https://uitbackend.onrender.com/menu"
   //     );
   //     setDishItem(data.data.menu);
   //     return data.data.menu;
   //   }
   //   getDish();
-  // }, ["https://uitcanteen-backend.herokuapp.com/menu"]);
+  // }, ["https://uitbackend.onrender.com/menu"]);
 
   const checkItem:any = JSON.parse(window.localStorage.getItem('fullMenu')|| '{}')
 

@@ -118,7 +118,7 @@ export function PayCart({ isOpenPay }: PayCartProps) {
     if (getPayInfo !== "undefined") payinfo = JSON.parse(getPayInfo);
     else payinfo = undefined;
     axios
-      .post("https://uitcanteen-backend.herokuapp.com/sendorder", info)
+      .post("https://uitbackend.onrender.com/sendorder", info)
       .then((response) => {
         console.log(response.data);
         if (payinfo !== "undefined") {

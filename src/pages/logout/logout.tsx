@@ -20,7 +20,7 @@ export function Logout() {
   }, [navigate]);
 
   Axios.defaults.withCredentials = true;
-  Axios.get("https://uitcanteen-backend.herokuapp.com/logout").then(
+  Axios.get("https://uitbackend.onrender.com/logout").then(
     (response) => {
       if (response.data.message) {
         toast(response.data.message);

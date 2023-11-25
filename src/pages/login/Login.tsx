@@ -30,7 +30,7 @@ export function Login() {
     if (username == "") {
       toast("Please enter email");
     } else {
-      Axios.post("https://uitcanteen-backend.herokuapp.com/login", {
+      Axios.post("https://uitbackend.onrender.com/login", {
         username: username,
         password: password,
       }).then((response) => {
